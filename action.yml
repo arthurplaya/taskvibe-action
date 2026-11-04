@@ -1,0 +1,28 @@
+name: TaskVibe
+description: Transforme une Epic en plan de tâches réparties dans l'équipe avec l'IA, puis en sub-issues GitHub
+author: arthurplaya
+branding:
+  icon: check-square
+  color: purple
+inputs:
+  gemini-api-key:
+    description: Clé API Gemini (gratuite sur https://aistudio.google.com), à passer depuis un secret
+    required: false
+  github-token:
+    description: Jeton utilisé pour commenter et créer les issues
+    default: ${{ github.token }}
+  label:
+    description: Label qui déclenche la génération du plan
+    default: vibe-plan
+  language:
+    description: Langue des messages (en ou fr) si .team-skills.yml n'en précise pas
+    default: en
+  gemini-model:
+    description: Modèle Gemini principal ; d'autres modèles prennent le relais s'il est surchargé
+    default: gemini-3.8-flash
+  bot-login:
+    description: Auteur des commentaires du bot (à changer seulement si github-token n'est pas le jeton par défaut)
+    default: github-actions[bot]
+runs:
+  using: node24
+  main: dist/index.mjs

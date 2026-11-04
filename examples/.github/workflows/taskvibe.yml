@@ -1,0 +1,29 @@
+# À copier dans .github/workflows/taskvibe.yml de ton dépôt.
+name: TaskVibe
+
+on:
+  issues:
+    types: [labeled]
+  issue_comment:
+    types: [created]
+  # Bouton « Run workflow » de l'onglet Actions : crée le label vibe-plan
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+# Une seule commande à la fois par Epic
+concurrency:
+  group: taskvibe-${{ github.event.issue.number || 'setup' }}
+
+jobs:
+  taskvibe:
+    # Ne démarre pas de machine pour les commentaires ordinaires
+    if: github.event_name != 'issue_comment' || startsWith(github.event.comment.body, '/')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: arthurplaya/taskvibe-action@v1
+        with:
+          gemini-api-key: ${{ secrets.GEMINI_API_KEY }}

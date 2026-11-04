@@ -1,0 +1,31 @@
+name: Projet
+description: Décrire le projet pour que TaskVibe le découpe en tâches réparties dans l'équipe
+title: "[Epic] "
+labels: ["vibe-plan"]
+body:
+  - type: textarea
+    id: objectifs
+    attributes:
+      label: Objectifs
+      description: Le but du projet et l'idée retenue par l'équipe.
+    validations:
+      required: true
+  - type: textarea
+    id: livrables
+    attributes:
+      label: Livrables
+      description: Ce qui doit être prêt à la fin (démo, pitch, code...).
+    validations:
+      required: true
+  - type: input
+    id: duree
+    attributes:
+      label: Durée
+      description: "Durée du projet (ex : 3 jours, du vendredi 9 h au dimanche 16 h ; ou 6 semaines)."
+    validations:
+      required: true
+  - type: textarea
+    id: contraintes
+    attributes:
+      label: Contraintes
+      description: Technologies imposées, budget, critères d'évaluation...

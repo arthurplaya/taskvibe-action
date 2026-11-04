@@ -1,0 +1,25 @@
+# À placer à la racine du dépôt.
+# `github` doit être le login GitHub exact : il sert à assigner les issues.
+
+# Langue des messages du bot : fr ou en (par défaut). Les tâches suivent la langue de l'Epic.
+locale: fr
+
+members:
+  - github: login-de-camille
+    name: Camille
+    role: Développeuse front-end
+    skills: [React, CSS, accessibilité]
+    # Disponibilité : par jour (projets courts) ou par semaine (projets longs)
+    capacity_hours_per_day: 8
+
+  - github: login-de-yanis
+    name: Yanis
+    role: Développeur back-end
+    skills: [Node.js, PostgreSQL, API REST]
+    capacity_hours_per_day: 6
+
+  - github: login-de-ines
+    name: Inès
+    role: Designer
+    skills: [Figma, maquettes, tests utilisateurs]
+    capacity_hours_per_day: 4
