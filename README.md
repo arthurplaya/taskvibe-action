@@ -6,6 +6,8 @@ Tout se passe dans GitHub, avec ta propre clé d'IA (Gemini, gratuite). Il n'y a
 
 ## Installation (5 minutes, une fois par dépôt)
 
+**Pour un nouveau projet, le plus simple** : sur [taskvibe-template](https://github.com/arthurplaya/taskvibe-template), clique sur **Use this template**, puis suis la liste de mise en route du README. Pour un dépôt existant, suis les étapes ci-dessous.
+
 1. **La clé d'IA.** Crée une clé gratuite sur [Google AI Studio](https://aistudio.google.com/apikey), puis ajoute-la dans ton dépôt, dans *Settings → Secrets and variables → Actions → New repository secret*, sous le nom `GEMINI_API_KEY`.
 2. **Le workflow.** Copie [`examples/.github/workflows/taskvibe.yml`](examples/.github/workflows/taskvibe.yml) dans `.github/workflows/taskvibe.yml` de ton dépôt.
 3. **Le label.** Dans l'onglet *Actions*, choisis *TaskVibe*, puis *Run workflow*. Cette étape crée le label `vibe-plan`.
