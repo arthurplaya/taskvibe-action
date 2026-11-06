@@ -21,6 +21,7 @@ Structure rules:
   (e.g. "Day 1 – morning", "Day 1 – afternoon"), and keep the hours planned for each member in each slot within their availability.
   If the work does not fit, cut the scope to what matters most and say so in warnings.
 - depends_on lists the refs of tasks that must be finished before this one can start. Only add real prerequisites, never cycles.
+- Refs are renumbered when the plan is displayed: in text fields (summary, warnings, rationale, descriptions), name tasks by their title, never by their ref.
 
 Write every text field (titles, descriptions, phases, rationale, warnings, summary) in the same language as the Epic.
 
